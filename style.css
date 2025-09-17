@@ -1,0 +1,321 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(226, 43%, 10%);
+    color: hsl(0, 0%, 100%);
+}
+
+main {
+    display: grid;
+    width: 90%;
+    max-width: 400px;
+    margin: 3.5rem auto;
+    gap: 1rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'six'
+    'seven';
+}
+
+h1 {
+    font-size: 1.5rem;
+    opacity: .9;
+    font-weight: 400;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.profile {
+    border-radius: .7rem;
+    overflow: hidden;
+    background-color: hsl(235, 46%, 20%);
+    text-align: center;
+    grid-area: one;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    background-color: hsl(235, 45%, 61%);
+    padding: 1.5rem;
+    border-radius: .7rem;
+    text-align: left;
+}
+
+.profile-info p, h1 {
+    margin: 0;
+}
+
+.profile-info p {
+    font-weight: 300;
+    font-size: .9rem;
+    opacity: .7;
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic, .profile-pic img {
+    width: 60px;
+    height: 60px;
+}
+
+.frequency-btn {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background: none;
+    font-weight: 400;
+    color: hsl(235, 45%, 61%);
+    font-size: .9rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card {
+    overflow: hidden;
+    border-radius: .7rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+}
+
+.icon img {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+}
+.details {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: .7rem;
+    padding: 1.5rem 1rem;
+}
+
+.details:hover {
+    background-color: hsl(236, 45%, 25%);
+    cursor: pointer;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-header h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    /* opacity: .9; */
+}
+
+.menu-icon {
+    justify-self: end;
+    align-self: start;
+    cursor: pointer;
+}
+
+.menu-icon svg path {
+  fill: #BBC0FF; /* default */
+  transition: fill 0.3s ease;
+}
+
+.menu-icon:hover svg path {
+  fill: #fff; /* changes on hover */
+}
+
+.hours {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+.current-hours {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.previous-hours {
+    font-size: .8rem;
+    font-weight: 400;
+    opacity: .8;
+    justify-self: end;
+}
+
+.work-section {
+    background-color: hsl(15, 100%, 70%);
+    grid-area: two;
+}
+
+.play-section {
+    background-color: hsl(195, 74%, 62%);
+    grid-area: three;
+}
+
+.study-section {
+    background-color: hsl(348, 100%, 68%);
+    grid-area: four;
+}
+
+.exercise-section {
+    background-color: hsl(145, 58%, 55%);
+    grid-area: five;
+}
+
+.social-section {
+    background-color: hsl(264, 64%, 52%);
+    grid-area: six;
+}
+
+.self-care-section {
+    background-color: hsl(43, 84%, 65%);
+    grid-area: seven;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+.attribution a:hover { 
+    color: hsl(228, 45%, 74%); 
+    text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    main {
+        max-width: 900px;
+        align-items: center;
+        margin: 0 auto;
+        gap: 1rem;
+        grid-template-areas: 
+        'one two three four'
+        'one five six seven';
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        text-align: left;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .profile {
+        height: 100%;
+        display: grid;
+        text-align: left;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+        align-items: start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .profile-info {
+        padding-bottom: 2rem;
+    }
+
+    .frequency-btn {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: .5rem 1rem; 
+    }
+
+    .card-header {
+        margin-bottom: 1rem;
+    }
+
+    .card-header h2 {
+        font-size: 1rem;
+    }
+
+    .hours {
+        grid-template-columns: 1fr;
+        align-items: left;
+    }
+
+    .current-hours {
+        font-size: 2.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .previous-hours {
+        justify-self: start;
+    }
+}
